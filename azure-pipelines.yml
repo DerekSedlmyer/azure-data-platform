@@ -19,7 +19,12 @@ stages:
           - task: TerraformTaskV2@2
             displayName: Init Terraform
             inputs:
-              command: init
+              provider: 'azurerm'
+              command: 'init'
+              backendServiceArm: 'dss-msdn'
+              backendAzureRmResourceGroupName: 'dss-devops-01'
+              backendAzureRmStorageAccountName: 'dsstfstateeus01'
+              backendAzureRmContainerName: 'tfstate'
           - task: TerraformTaskV2@2
             displayName: Validate Terraform
             inputs:
