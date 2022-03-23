@@ -26,6 +26,7 @@ stages:
               backendAzureRmResourceGroupName: 'dss-devops-01'
               backendAzureRmStorageAccountName: 'dsstfstateeus01'
               backendAzureRmContainerName: 'tfstate'
+              
           - task: TerraformTaskV2@2
             displayName: Validate Terraform
             inputs:
