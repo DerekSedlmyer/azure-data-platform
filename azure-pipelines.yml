@@ -22,6 +22,7 @@ stages:
               provider: 'azurerm'
               command: 'init'
               backendServiceArm: 'dss-msdn'
+              backendAzureRmKey: 'dss-msdn'
               backendAzureRmResourceGroupName: 'dss-devops-01'
               backendAzureRmStorageAccountName: 'dsstfstateeus01'
               backendAzureRmContainerName: 'tfstate'
