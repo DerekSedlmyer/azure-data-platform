@@ -12,7 +12,17 @@ stages:
         displayName: Validate Terraform
         steps:
           - task: TerraformInstaller@0
+            displayName: Install Terraform
             inputs:
               terraformVersion: 'latest'
+          
+          - task: TerraformTaskV2@2
+            displayName: Init Terraform
+            inputs:
+              command: init
+          - task: TerraformTaskV2@2
+            displayName: Validate Terraform
+            inputs:
+             command: validate
 
 
